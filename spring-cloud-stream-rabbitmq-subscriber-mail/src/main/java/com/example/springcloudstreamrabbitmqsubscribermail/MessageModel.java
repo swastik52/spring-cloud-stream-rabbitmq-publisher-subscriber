@@ -1,13 +1,18 @@
 package com.example.springcloudstreamrabbitmqsubscribermail;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 import java.io.Serializable;
+import lombok.Data;
+
 
 @Data
-public class MessageModel implements Serializable
-{
-    @JsonProperty("sender_name")
-    private String senderName;
-    private String message;
+public class MessageModel implements Serializable{
+	
+	private String name;
+	private String[] to;
+	private String from;
+	//flag
+	private String messagefor;
+	private String vehicleno;
+	private String vehicleInfo;
+
 }
